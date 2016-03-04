@@ -6,16 +6,16 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, GAPI, Calendar) {
+  function MainController($log, googleLogin) {
     var vm = this;
 
     $log.debug("Testing");
 
     vm.googleAuthenticate = function() {
       $log.debug("Login with Google");
-      // TODO: This is currently using the ngGAPI. Need to replace this with angular-googleapi
-      GAPI.init();
+      googleLogin.login();
     }
+    vm.currentUser = googleLogin.currentUser;
 
   }
 })();

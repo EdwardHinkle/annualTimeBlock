@@ -1,25 +1,11 @@
 div(layout="vertical", layout-fill)
 
   md-content
-    header
-      acme-navbar(creation-date="main.creationDate")
-
-    section.jumbotron
-      h1 'Allo, 'Allo!
-      p.lead
-        img(src="assets/images/yeoman.png", alt="I'm Yeoman")
-        br
-        Always a pleasure scaffolding your apps.
-      md-button(ng-class="main.classAnimation", ng-click="main.showToastr()").md-raised.animated.infinite Splendid Toastr
-      p
-        With ♥ thanks to the contributions of
-          acme-malarkey(extra-values="['Yeoman', 'Gulp', 'Angular']")
 
     div(class="techs", layout-align="center")
-      md-card(ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'")
+      md-card(flex-xs, flex-gt-xs="50")
         md-card-content
-          img(ng-src="assets/images/{{ awesomeThing.logo }}", alt="{{ awesomeThing.title }}").pull-right
-          h3.md-title {{ awesomeThing.title }}
-          p {{ awesomeThing.description }}
-        div.md-action-buttons
-          md-button(ng-href="{{ awesomeThing.url }}") Website
+          h3.md-title Annual Time Block
+          p Click below to login using your Google account. We use Google Calendar to store and retrieve your annual calendar so that you aren't locked in one system.
+        div(layout, layout-align="center center").md-action-buttons
+          md-button(ng-click="main.googleAuthenticate()").md-raised.md-primary Login with Google

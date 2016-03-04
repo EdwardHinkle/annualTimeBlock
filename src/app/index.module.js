@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('annualTimeBlock', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ngMaterial', 'toastr', 'gapi']);
+    .module('annualTimeBlock', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ngMaterial', 'toastr', 'googleApi']);
 
 })();

@@ -12,8 +12,8 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock() {
-
+  function runBlock(googleLogin) {
+    googleLogin.login();
 
   }
 
